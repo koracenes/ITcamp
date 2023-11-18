@@ -1,0 +1,40 @@
+~<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    let niz = [1,2,3,4,5,6,7,8,9,0]
+    while(true){
+    let malaSlova = 0
+    let velikaSlova = 0
+    let brojBrojevi = 0
+    
+    let rec = prompt("unesi rec")
+    if(rec===0)
+        break
+   let g =  rec.split(" ")
+   let b =  g.join("")
+
+    for(let i =0; i< b.length;i++){
+        if(niz.includes(parseInt(b[i]))){
+            brojBrojevi++
+        }
+        else if(b[i]=== b[i].toUpperCase()){
+            velikaSlova++
+        }else{
+        // (rec[i]=== rec[i].toLowerCase())
+            malaSlova++
+        }
+    }
+    console.log(`${rec} :ima ${velikaSlova} velikih slova, i ${malaSlova} mala slova, ${brojBrojevi} brojeva`);
+    console.log(b);
+}
+
+</script>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prosti Brojevi</title>
+    <script>
+/*
+    9.15 Sastaviti program koji ispisuje sve proste brojeve manje od 500
+    koristiti funkciju za odredjivanje prostih brojeva
+*/
+
+        function Prost(broj){
+            for(let i=2; i<broj; i++){
+                if (broj%i===0) return false
+                return true
+            }
+        }
+
+        function proveri(){
+            let c=1;
+            for (let i=1; i<=500;i++){
+                if(Prost(i)){
+                    const para = document.createElement("p")
+                    const node = document.createTextNode(c+": "+i)
+                    para.appendChild(node)
+                    const element = document.getElementById("div1")
+                    element.appendChild(para)
+                    c++
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>PROSTI BROJEVI</h1>
+    <p>9.15 Sastaviti program koji ispisuje sve proste brojeve manje od 500 <br>
+        koristiti funkciju za odredjivanje prostih brojeva</p>
+    <button onclick="proveri()">Pokreni Funkciju</button>
+    <div id="div1">
+
+    </div>
+</body>
+</html>

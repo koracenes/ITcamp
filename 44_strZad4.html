@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<script>
+			while (true) {
+				let slovoA = 0;
+
+				let rec = prompt("unesi rec");
+				if (rec === 0) break;
+				for (let i = 0; i < rec.length; i++) {
+					if (rec[i] === "A") {
+						slovoA++;
+					}
+				}
+
+				let procenat = (slovoA / rec.length) * 100;
+				console.log(
+					`u reci ${rec} slovo A se pojavljuje: ${slovoA} sto je ${
+						(slovoA / rec.length) * 100
+					}%  = ${procenat}`
+				);
+			}
+		</script>
+	</head>
+	<body></body>
+</html>

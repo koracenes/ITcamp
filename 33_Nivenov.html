@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        
+        
+        /*
+            9.18 Sastaviti program kojim se ispisuju svi Nivenovi brojevi druge stotice
+            Niveov broj je broj koji je deljiv sa sumom svojih cifara
+            formirati dve funkcije:
+            1. racuna sumu cifara
+            2. odredjuje da li je broj Nivenov
+        */
+        
+      
+
+        
+        function sumCifara(n){
+        
+            let suma=0
+        
+            while(n>0){
+                suma+=n%10
+                n = Math.trunc(n/10)
+            }
+            return suma
+        }
+        
+        function isNivenov(n){
+                if(n%sumCifara(n)===0) return true
+                return false
+        }
+        
+        for(let i=100; i<200; i++){
+            if(isNivenov(i)){
+                console.log(i);
+            }
+        }
+    </script>
+</head>
+<body>
+
+<h1>NIVENOV BROJ</h1>
+    <p> 9.18 Sastaviti program kojim se ispisuju svi Nivenovi brojevi druge stotice <br> 
+        Niveov broj je broj koji je deljiv sa sumom svojih cifara <br>
+        formirati dve funkcije: <br>
+        1. racuna sumu cifara <br>
+        2. odredjuje da li je broj Nivenov</p>
+</body>
+</html>

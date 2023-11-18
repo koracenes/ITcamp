@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+/*
+    9.17 Sastaviti program kojim se ispisuju svi trocifreni 
+    Amstrongovi brojevi. trocifren broj je Amstrongov ako  je jednak
+    sumi kubova svojih cifara. Formirati dve funkcije, jedna za racunanje
+    sume kubova, a druga za odredjivanmje da li je dati broj Amstrongov. 
+    ako jeste vraca 1, ako nije vraca 0
+*/
+
+let sumaKubova2 = (n) =>{
+    return Math.pow(Math.floor(n/10)%10,3)+Math.pow(Math.floor(n/10)%10,3)+Math.pow(Math.floor(n%10,3))
+}
+
+function isArmstorin(n){
+    if(n===sumaKubova2(n))
+}
+
+
+
+function sumaKubova(broj){
+    let suma = 0
+    // console.log("Suma kubova broja "+broj+" je:");
+    while(broj>0){
+        suma+=Math.pow(broj%10,3)
+        broj = Math.trunc(broj/10)
+    }
+    return suma
+    // console.log(suma);
+}
+
+function Amstrongov(n){
+    if(n===sumaKubova(n)){
+        return true
+    }
+    return false
+}
+
+function Provera(){
+    for(let i=100; i<=999; i++){
+        if(Amstrongov(i)){
+            const para = document.createElement("p")
+            const node = document.createTextNode(i)
+            para.appendChild(node)
+            const element = document.getElementById("div1")
+            element.appendChild(para)
+        }
+    }
+    
+}
+
+
+    </script>
+</head>
+<body>
+    <h1>ARMSTRONGOVI BROJEVI</h1>
+    <p>9.17 Sastaviti program kojim se ispisuju svi trocifreni <br>
+        Amstrongovi brojevi. trocifren broj je Amstrongov ako  je jednakbr <br>
+        sumi kubova svojih cifara. Formirati dve funkcije, jedna za racunanje <br>
+        sume kubova, a druga za odredjivanmje da li je dati broj Amstrongov. <br>
+        ako jeste vraca 1, ako nije vraca 0</p>
+    <button onclick="Provera()">Pokreni Funkciju</button>
+    <div id="div1">
+
+    </div>
+    
+</body>
+</html>

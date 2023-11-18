@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+/*
+8.12. Саставити програм који испитује да ли су у унетом тексту заграде
+“(“ и “ )“ добро упарене. Унос текста се завршава сигналом ЕОF.
+*/
+
+while(true){
+    let zag1 =0
+    let zag2 =0
+
+    let rec = prompt("Unesite recenicu:")
+    if(rec== 0) break;
+    for(let slovo of rec){
+       if(slovo == "(") zag1++
+       if(slovo == ")") zag2++
+    }
+
+    if(zag1>zag2){
+        console.log("ima visak otvorenig zagrada");
+    }else if (zag2>zag1){
+        console.log("ima visak zatvorenih zagrada");
+    }else{
+        console.log("zaagrade su uredu!");
+    }
+}
+</script>
+<body>
+    
+</body>
+</html>
